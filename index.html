@@ -1,0 +1,289 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Alej Bojnice · reštaurácia na pešej zóne pod zámkom — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre reštauráciu Alej v Bojniciach. Ukážka od webdavid.sk.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232e1f28'/%3E%3Ccircle cx='16' cy='14' r='8' fill='%23d98f24'/%3E%3Cpath d='M16 20v7' stroke='%23d98f24' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#edefea;--paper:#f8f8f4;--ink:#27202a;--plum:#2e1f28;--rust:#b4471f;--gold:#e2b23c;--moss:#6f6a2e;
+  --line:rgba(39,32,42,.16);--mute:rgba(39,32,42,.7);--rail:rgba(111,106,46,.55);
+  --head:'Cormorant','Cormorant Garamond',Georgia,serif;--body:'Mulish',system-ui,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+svg,img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px;border-radius:2px}
+.u{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.u:hover{background-size:100% 1px}
+.lbl{font:700 12px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase}
+.num{font-family:var(--body);font-variant-numeric:tabular-nums lining-nums}
+.notice{background:var(--plum);color:#f1ece4;font-size:13.5px;line-height:1.45;padding:9px var(--gut);text-align:center}
+.notice b{font-weight:800}
+
+/* hero */
+.hero{position:relative;min-height:min(600px,82vh);overflow:hidden;background:#dbd9c6;isolation:isolate}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;max-width:none}
+.hero .m{display:none}
+header{display:flex;align-items:center;gap:28px;padding:20px var(--gut);max-width:1240px;margin:0 auto}
+.logo{font:600 34px/1 var(--head);text-decoration:none;margin-right:auto;letter-spacing:.01em}
+nav{display:flex;gap:26px;font-size:15px;font-weight:600}
+nav a{padding:12px 0;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 9px)/0 1px no-repeat;transition:background-size .2s}
+nav a:hover{background-size:100% 1px}
+.tel{font-weight:700;text-decoration:none;white-space:nowrap;padding:12px 0;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;background:var(--rust);color:#fff;font:700 15px/1 var(--body);letter-spacing:.03em;text-decoration:none;border:2px solid var(--rust);border-radius:2px;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--rust)}
+.btn.o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+.title{position:absolute;left:0;right:0;bottom:clamp(30px,6vh,56px);text-align:center;color:#fff;text-shadow:0 2px 18px rgba(30,15,25,.45)}
+h1{font:500 clamp(84px,14vw,168px)/.85 var(--head);letter-spacing:.01em}
+.title p{font:700 12px/1.4 var(--body);letter-spacing:.28em;text-transform:uppercase;margin-top:18px;padding:0 16px}
+
+/* facts strip */
+.strip{background:var(--plum);color:#f3eee6}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+.sf{padding:22px 18px 20px;border-left:1px solid rgba(255,255,255,.16)}
+.sf:first-child{border-left:0;padding-left:0}
+.sf b{display:block;font:500 30px/1.1 var(--body);font-variant-numeric:tabular-nums lining-nums;color:var(--gold);letter-spacing:-.01em}
+.sf b i{font-style:normal;font-size:.7em;margin-left:3px}
+.sf span{display:block;font-size:14px;line-height:1.4;margin-top:6px;color:rgba(243,238,230,.8)}
+
+/* rail / stops */
+.rail{position:relative;padding-top:84px;padding-bottom:84px;padding-left:calc(var(--gut) + 64px)}
+.rail::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--gut) + 15px);border-left:2px dotted var(--rail)}
+.mark{position:absolute;left:calc(var(--gut) + 1px);top:80px;width:30px;height:32px;color:var(--rust)}
+.mark circle.ring{fill:var(--mbg,var(--bg))}
+.stop .lbl{color:var(--rust);margin-bottom:14px;display:block}
+h2{font:500 clamp(40px,5.2vw,68px)/1 var(--head);text-wrap:balance;letter-spacing:-.005em}
+.row{height:30px;width:100%;display:block}
+.row rect{fill:url(#row)}
+
+/* stop 1 */
+.intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(28px,6vw,90px);align-items:start;margin-top:26px}
+blockquote{font:italic 500 clamp(28px,3.4vw,42px)/1.18 var(--head)}
+blockquote+blockquote{margin-top:18px;color:var(--rust)}
+.src{font-size:13px;color:var(--mute);margin-top:14px}
+.kf{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.kf li{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}
+.kf li b{display:block;font:700 12px/1.6 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* autumn (money) */
+.autumn{background:var(--plum);color:#f3eee6;--mbg:var(--plum);--rail:rgba(226,178,60,.45)}
+.autumn .lbl{color:var(--gold)}
+.autumn .mark{color:var(--gold)}
+.autumn h2{color:#fff;max-width:14ch}
+.fbq{font:italic 500 clamp(24px,2.6vw,32px)/1.25 var(--head);max-width:36ch;color:#f3eee6;margin-top:26px;padding-left:20px;border-left:2px solid var(--gold)}
+.ahead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px clamp(28px,6vw,90px);align-items:end}
+.menus{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(28px,6vw,90px);margin-top:52px}
+.menus h3{font:700 12px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding-bottom:14px;border-bottom:1px solid rgba(243,238,230,.4)}
+.menus ul{list-style:none;padding:0}
+.menus li{font:500 clamp(25px,2.4vw,32px)/1.2 var(--head);padding:14px 0 13px;border-bottom:1px solid rgba(243,238,230,.16)}
+.menus small{display:block;font:400 13px/1.5 var(--body);color:rgba(243,238,230,.66);margin-top:12px}
+.anote{margin-top:36px;padding:16px 20px;border:1px solid rgba(226,178,60,.55);font-size:15.5px;max-width:78ch;color:#f3eee6}
+.anote b{color:var(--gold)}
+
+/* pri stole */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--line)}
+.ft{padding:22px 24px 26px 0;border-bottom:1px solid var(--line)}
+.ft:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--line)}
+.ft h3{font:600 28px/1.1 var(--head)}
+.ft p{font-size:15px;line-height:1.55;color:var(--mute);margin-top:6px}
+
+/* hostia */
+.big{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px}
+.bg3{padding:8px 26px 8px 0}
+.bg3+.bg3{padding-left:26px;border-left:1px dotted var(--rail)}
+.bg3 b{display:block;font:500 clamp(54px,7vw,92px)/1 var(--body);letter-spacing:-.03em;color:var(--rust);font-variant-numeric:tabular-nums lining-nums}
+.bg3 b i{font-style:normal;font-size:.5em;color:var(--moss);margin-left:4px;vertical-align:.25em}
+.bg3 span{display:block;font-size:15px;line-height:1.5;color:var(--mute);margin-top:10px;max-width:26ch}
+.bg3 span strong{color:var(--ink);font-weight:700}
+
+/* kontakt */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,90px);margin-top:34px}
+.hours{border-top:1px solid var(--line)}
+.hours .r{display:flex;justify-content:space-between;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:19px}
+.hours .r b{font-weight:800;font-variant-numeric:tabular-nums}
+.warn{margin-top:18px;padding:14px 16px;border:1px dashed var(--rust);font-size:15px;background:var(--paper)}
+dl{border-top:1px solid var(--line)}
+dl div{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+dt{font:700 12px/1.9 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+dd{font-size:17px;overflow-wrap:anywhere}
+dd a{font-weight:700}
+footer{background:var(--plum);color:rgba(243,238,230,.84);padding:30px 0 34px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-between}
+.bar{display:none}
+
+@media (max-width:1020px){nav{display:none}.feat{grid-template-columns:1fr 1fr}.ft:not(:nth-child(3n+1)){padding-left:0;border-left:0}.ft:nth-child(2n){padding-left:24px;border-left:1px solid var(--line)}.ft:nth-child(2n+1){padding-left:0;border-left:0}
+  .strip .wrap{grid-template-columns:1fr 1fr}.sf:nth-child(3){border-left:0;padding-left:0}.sf:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}}
+@media (max-width:760px){
+  body{font-size:16.5px;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .hero .d{display:none}.hero .m{display:block}
+  header{padding:14px var(--gut)}.logo{font-size:30px}.tel,header .btn{display:none}
+  h1{font-size:clamp(92px,30vw,128px)}
+  .title p{font-size:11px;letter-spacing:.2em}
+  .rail{padding-top:60px;padding-bottom:60px;padding-left:calc(var(--gut) + 42px)}
+  .mark{top:56px;width:26px;height:28px;left:calc(var(--gut) + 2px)}
+  .rail::before{left:calc(var(--gut) + 15px)}
+  .intro,.ahead,.menus,.cols{grid-template-columns:1fr}
+  .menus{margin-top:34px;gap:34px}
+  .feat{grid-template-columns:1fr}.ft{padding-left:0!important;border-left:0!important}
+  .big{grid-template-columns:1fr;gap:24px}.bg3+.bg3{padding-left:0;border-left:0;border-top:1px dotted var(--rail);padding-top:22px}
+  .bg3 b{font-size:64px}
+  dl div{grid-template-columns:1fr;gap:0}
+  .fbq{font-size:23px}
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--plum);box-shadow:0 -1px 0 rgba(255,255,255,.16)}
+  .bar a{min-height:48px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.03em;text-decoration:none;border-radius:2px}
+  .bar .a{background:var(--rust);color:#fff}.bar .b{border:2px solid rgba(255,255,255,.6);color:#fff}
+  .cta .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9c8cf"/><stop offset=".6" stop-color="#dbd9c6"/><stop offset="1" stop-color="#efdcae"/></linearGradient>
+<radialGradient id="gl"><stop offset="0" stop-color="#fff2c7" stop-opacity=".85"/><stop offset="1" stop-color="#fff2c7" stop-opacity="0"/></radialGradient>
+<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a39a54"/><stop offset="1" stop-color="#6c6a30"/></linearGradient>
+<linearGradient id="rd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a7479"/><stop offset=".5" stop-color="#5a4450"/><stop offset="1" stop-color="#352630"/></linearGradient>
+<symbol id="tr" overflow="visible"><rect x="-4.5" y="-64" width="9" height="64" fill="#4a3429"/>
+<ellipse cy="-112" rx="48" ry="62" style="fill:var(--c)"/><ellipse cx="-18" cy="-98" rx="28" ry="36" fill="#fff" opacity=".13"/><ellipse cx="22" cy="-124" rx="26" ry="34" fill="#000" opacity=".11"/></symbol>
+<symbol id="cr" viewBox="-14 -14 28 30" overflow="visible"><circle r="12" fill="currentColor"/><circle cx="-4" cy="-4" r="5" fill="#fff" opacity=".18"/><path d="M0 10V16" stroke="currentColor" stroke-width="2.4"/></symbol>
+<pattern id="row" width="132" height="30" patternUnits="userSpaceOnUse"><g stroke-width="2.4"><g fill="#c2522b" stroke="#c2522b"><circle cx="14" cy="13" r="8"/><path d="M14 20V27"/></g><g fill="#e2b23c" stroke="#e2b23c"><circle cx="47" cy="13" r="8"/><path d="M47 20V27"/></g><g fill="#8c7f2b" stroke="#8c7f2b"><circle cx="80" cy="13" r="8"/><path d="M80 20V27"/></g><g fill="#7d3b30" stroke="#7d3b30"><circle cx="113" cy="13" r="8"/><path d="M113 20V27"/></g></g></pattern>
+</defs></svg>
+<div class="notice"><b>Neoficiálny návrh — nie je to oficiálny web podniku</b> · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<div class="hero">
+  <svg class="bg d" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><rect width="1440" height="600" fill="url(#sk)"/><circle cx="720" cy="280" r="374" fill="url(#gl)"/><path d="M0 324Q173 284 374 308T749 300T1152 304T1440 290V334H0Z" fill="#b4bdb5"/><path d="M0 330Q259 300 490 318T950 314T1440 308V334H0Z" fill="#9aa8a0"/><g transform="translate(720 316) scale(1.0)" opacity="0.96" fill="#6f7b86"><rect x="-95" y="-46" width="190" height="46"/><path d="M-95 -49H95" stroke="#6f7b86" stroke-width="6" stroke-dasharray="6 5"/><rect x="-112" y="-82" width="30" height="82"/><path d="M-117 -82H-77L-97 -124Z"/><rect x="78" y="-70" width="28" height="70"/><path d="M74 -70H110L92 -106Z"/><rect x="-30" y="-96" width="60" height="52"/><path d="M-37 -96H37L0 -142Z"/><path d="M0 -142V-160" stroke="#6f7b86" stroke-width="2"/><rect x="-46" y="-84" width="13" height="40"/><path d="M-48 -84H-31L-39.5 -110Z"/><rect x="33" y="-84" width="13" height="40"/><path d="M31 -84H48L39.5 -110Z"/><rect x="-64" y="-66" width="22" height="22"/><path d="M-66 -66H-40L-53 -88Z"/><rect x="44" y="-58" width="20" height="14"/><path d="M42 -58H66L54 -76Z"/><g fill="#f3cf78"><rect x="-6" y="-78" width="4" height="9"/><rect x="3" y="-78" width="4" height="9"/><rect x="-102" y="-66" width="4" height="8"/><rect x="88" y="-52" width="4" height="8"/><rect x="-30" y="-30" width="4" height="8"/><rect x="26" y="-30" width="4" height="8"/></g></g><path d="M465 332Q570 320 660 306Q720 300 780 306Q870 320 975 332Z" fill="#93a299"/><rect y="330" width="1440" height="270" fill="url(#gr)"/><path d="M717 330L320 600H1120L723 330Z" fill="url(#rd)"/><path d="M717 330L320 600M723 330L1120 600" stroke="#d9c7a0" stroke-width="2" opacity=".7" fill="none"/><ellipse cx="686" cy="348" rx="6" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(686 346) scale(0.120)" style="--c:#8c7f2b" opacity="0.65"/><ellipse cx="758" cy="350" rx="6" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(758 348) scale(0.135)" style="--c:#d98f24" opacity="0.65"/><ellipse cx="677" cy="353" rx="7" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(677 351) scale(0.152)" style="--c:#a8431f" opacity="0.65"/><ellipse cx="768" cy="355" rx="8" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(768 353) scale(0.172)" style="--c:#7d3b30" opacity="0.66"/><ellipse cx="666" cy="358" rx="9" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(666 356) scale(0.194)" style="--c:#c2522b" opacity="0.66"/><ellipse cx="781" cy="361" rx="10" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(781 359) scale(0.218)" style="--c:#c2522b" opacity="0.67"/><ellipse cx="651" cy="365" rx="11" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(651 363) scale(0.246)" style="--c:#c77a26" opacity="0.68"/><ellipse cx="798" cy="369" rx="13" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(798 367) scale(0.277)" style="--c:#e2b23c" opacity="0.68"/><ellipse cx="633" cy="374" rx="14" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(633 372) scale(0.312)" style="--c:#c2522b" opacity="0.69"/><ellipse cx="819" cy="379" rx="16" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(819 377) scale(0.352)" style="--c:#8c7f2b" opacity="0.70"/><ellipse cx="609" cy="386" rx="18" ry="3" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(609 384) scale(0.396)" style="--c:#e2b23c" opacity="0.71"/><ellipse cx="845" cy="392" rx="21" ry="3" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(845 390) scale(0.447)" style="--c:#c2522b" opacity="0.72"/><ellipse cx="579" cy="400" rx="23" ry="4" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(579 398) scale(0.504)" style="--c:#e2b23c" opacity="0.73"/><ellipse cx="879" cy="409" rx="26" ry="4" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(879 407) scale(0.567)" style="--c:#d98f24" opacity="0.75"/><ellipse cx="541" cy="418" rx="29" ry="4" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(541 416) scale(0.639)" style="--c:#c2522b" opacity="0.76"/><ellipse cx="922" cy="429" rx="33" ry="5" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(922 427) scale(0.721)" style="--c:#c2522b" opacity="0.78"/><ellipse cx="493" cy="442" rx="37" ry="6" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(493 440) scale(0.812)" style="--c:#a8431f" opacity="0.80"/><ellipse cx="976" cy="456" rx="42" ry="6" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(976 454) scale(0.915)" style="--c:#a8431f" opacity="0.83"/><ellipse cx="431" cy="471" rx="47" ry="7" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(431 469) scale(1.031)" style="--c:#c2522b" opacity="0.85"/><ellipse cx="1045" cy="489" rx="53" ry="8" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(1045 487) scale(1.162)" style="--c:#d98f24" opacity="0.88"/><ellipse cx="353" cy="509" rx="60" ry="9" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(353 507) scale(1.310)" style="--c:#c2522b" opacity="0.91"/><ellipse cx="1133" cy="531" rx="68" ry="10" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(1133 529) scale(1.476)" style="--c:#e2b23c" opacity="0.95"/><ellipse cx="254" cy="557" rx="77" ry="12" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(254 555) scale(1.663)" style="--c:#a8431f" opacity="0.99"/><ellipse cx="1245" cy="585" rx="86" ry="13" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(1245 583) scale(1.875)" style="--c:#c2522b" opacity="1.00"/><ellipse cx="128" cy="617" rx="97" ry="15" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(128 615) scale(2.113)" style="--c:#c77a26" opacity="1.00"/><ellipse cx="1387" cy="653" rx="110" ry="17" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(1387 651) scale(2.381)" style="--c:#e2b23c" opacity="1.00"/><ellipse cx="618" cy="423" rx="2.6" ry="1.2" fill="#e2b23c" opacity=".78" transform="rotate(-33 618 423)"/><ellipse cx="811" cy="514" rx="5.1" ry="2.4" fill="#d98f24" opacity=".78" transform="rotate(-35 811 514)"/><ellipse cx="586" cy="510" rx="5.0" ry="2.3" fill="#d98f24" opacity=".78" transform="rotate(29 586 510)"/><ellipse cx="814" cy="421" rx="2.5" ry="1.2" fill="#7d3b30" opacity=".78" transform="rotate(-17 814 421)"/><ellipse cx="647" cy="418" rx="2.5" ry="1.1" fill="#e2b23c" opacity=".78" transform="rotate(-32 647 418)"/><ellipse cx="546" cy="512" rx="5.0" ry="2.4" fill="#e2b23c" opacity=".78" transform="rotate(14 546 512)"/><ellipse cx="957" cy="555" rx="6.2" ry="2.9" fill="#a8431f" opacity=".78" transform="rotate(6 957 555)"/><ellipse cx="570" cy="458" rx="3.6" ry="1.7" fill="#d98f24" opacity=".78" transform="rotate(-30 570 458)"/><ellipse cx="969" cy="514" rx="5.1" ry="2.4" fill="#7d3b30" opacity=".78" transform="rotate(17 969 514)"/><ellipse cx="649" cy="456" rx="3.5" ry="1.6" fill="#a8431f" opacity=".78" transform="rotate(-19 649 456)"/><ellipse cx="408" cy="551" rx="6.1" ry="2.9" fill="#a8431f" opacity=".78" transform="rotate(-35 408 551)"/><ellipse cx="395" cy="592" rx="7.3" ry="3.4" fill="#e2b23c" opacity=".78" transform="rotate(0 395 592)"/><ellipse cx="865" cy="466" rx="3.8" ry="1.8" fill="#e2b23c" opacity=".78" transform="rotate(18 865 466)"/><ellipse cx="604" cy="411" rx="2.3" ry="1.1" fill="#a8431f" opacity=".78" transform="rotate(-32 604 411)"/><ellipse cx="809" cy="410" rx="2.2" ry="1.0" fill="#7d3b30" opacity=".78" transform="rotate(17 809 410)"/><ellipse cx="891" cy="455" rx="3.5" ry="1.6" fill="#8c7f2b" opacity=".78" transform="rotate(-38 891 455)"/><ellipse cx="880" cy="588" rx="7.2" ry="3.3" fill="#c2522b" opacity=".78" transform="rotate(23 880 588)"/><ellipse cx="766" cy="409" rx="2.2" ry="1.0" fill="#d98f24" opacity=".78" transform="rotate(10 766 409)"/><ellipse cx="797" cy="477" rx="4.1" ry="1.9" fill="#a8431f" opacity=".78" transform="rotate(11 797 477)"/><ellipse cx="489" cy="509" rx="5.0" ry="2.3" fill="#c77a26" opacity=".78" transform="rotate(30 489 509)"/><ellipse cx="902" cy="454" rx="3.4" ry="1.6" fill="#7d3b30" opacity=".78" transform="rotate(8 902 454)"/><ellipse cx="581" cy="591" rx="7.3" ry="3.4" fill="#d98f24" opacity=".78" transform="rotate(-11 581 591)"/><ellipse cx="530" cy="531" rx="5.6" ry="2.6" fill="#e2b23c" opacity=".78" transform="rotate(-17 530 531)"/><ellipse cx="648" cy="451" rx="3.4" ry="1.6" fill="#e2b23c" opacity=".78" transform="rotate(7 648 451)"/><ellipse cx="994" cy="521" rx="5.3" ry="2.5" fill="#7d3b30" opacity=".78" transform="rotate(25 994 521)"/><ellipse cx="481" cy="590" rx="7.2" ry="3.4" fill="#c77a26" opacity=".78" transform="rotate(31 481 590)"/><ellipse cx="845" cy="477" rx="4.1" ry="1.9" fill="#a8431f" opacity=".78" transform="rotate(11 845 477)"/><ellipse cx="603" cy="410" rx="2.2" ry="1.0" fill="#a8431f" opacity=".78" transform="rotate(-20 603 410)"/><ellipse cx="671" cy="420" rx="2.5" ry="1.2" fill="#e2b23c" opacity=".78" transform="rotate(-21 671 420)"/><ellipse cx="910" cy="506" rx="4.9" ry="2.3" fill="#c2522b" opacity=".78" transform="rotate(-14 910 506)"/><ellipse cx="509" cy="522" rx="5.3" ry="2.5" fill="#8c7f2b" opacity=".78" transform="rotate(37 509 522)"/><ellipse cx="640" cy="471" rx="3.9" ry="1.8" fill="#a8431f" opacity=".78" transform="rotate(19 640 471)"/><ellipse cx="808" cy="495" rx="4.6" ry="2.1" fill="#c2522b" opacity=".78" transform="rotate(3 808 495)"/><ellipse cx="1004" cy="547" rx="6.0" ry="2.8" fill="#d98f24" opacity=".78" transform="rotate(26 1004 547)"/><ellipse cx="763" cy="402" rx="2.0" ry="0.9" fill="#e2b23c" opacity=".78" transform="rotate(-37 763 402)"/><ellipse cx="1043" cy="551" rx="6.1" ry="2.9" fill="#c77a26" opacity=".78" transform="rotate(-29 1043 551)"/><ellipse cx="925" cy="538" rx="5.8" ry="2.7" fill="#d98f24" opacity=".78" transform="rotate(5 925 538)"/><ellipse cx="967" cy="554" rx="6.2" ry="2.9" fill="#e2b23c" opacity=".78" transform="rotate(-16 967 554)"/><ellipse cx="1000" cy="561" rx="6.4" ry="3.0" fill="#d98f24" opacity=".78" transform="rotate(-15 1000 561)"/><ellipse cx="927" cy="502" rx="4.8" ry="2.2" fill="#c2522b" opacity=".78" transform="rotate(-5 927 502)"/><ellipse cx="530" cy="493" rx="4.5" ry="2.1" fill="#8c7f2b" opacity=".78" transform="rotate(17 530 493)"/><ellipse cx="1052" cy="561" rx="6.4" ry="3.0" fill="#8c7f2b" opacity=".78" transform="rotate(-30 1052 561)"/><ellipse cx="615" cy="442" rx="3.1" ry="1.5" fill="#8c7f2b" opacity=".78" transform="rotate(-14 615 442)"/><ellipse cx="564" cy="495" rx="4.6" ry="2.1" fill="#7d3b30" opacity=".78" transform="rotate(4 564 495)"/><ellipse cx="419" cy="559" rx="6.4" ry="3.0" fill="#c2522b" opacity=".78" transform="rotate(9 419 559)"/><ellipse cx="508" cy="556" rx="6.3" ry="2.9" fill="#d98f24" opacity=".78" transform="rotate(15 508 556)"/></svg>
+  <svg class="bg m" viewBox="0 0 600 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><rect width="600" height="760" fill="url(#sk)"/><circle cx="300" cy="280" r="156" fill="url(#gl)"/><path d="M0 324Q72 284 156 308T312 300T480 304T600 290V334H0Z" fill="#b4bdb5"/><path d="M0 330Q108 300 204 318T396 314T600 308V334H0Z" fill="#9aa8a0"/><g transform="translate(300 316) scale(0.78)" opacity="0.96" fill="#6f7b86"><rect x="-95" y="-46" width="190" height="46"/><path d="M-95 -49H95" stroke="#6f7b86" stroke-width="6" stroke-dasharray="6 5"/><rect x="-112" y="-82" width="30" height="82"/><path d="M-117 -82H-77L-97 -124Z"/><rect x="78" y="-70" width="28" height="70"/><path d="M74 -70H110L92 -106Z"/><rect x="-30" y="-96" width="60" height="52"/><path d="M-37 -96H37L0 -142Z"/><path d="M0 -142V-160" stroke="#6f7b86" stroke-width="2"/><rect x="-46" y="-84" width="13" height="40"/><path d="M-48 -84H-31L-39.5 -110Z"/><rect x="33" y="-84" width="13" height="40"/><path d="M31 -84H48L39.5 -110Z"/><rect x="-64" y="-66" width="22" height="22"/><path d="M-66 -66H-40L-53 -88Z"/><rect x="44" y="-58" width="20" height="14"/><path d="M42 -58H66L54 -76Z"/><g fill="#f3cf78"><rect x="-6" y="-78" width="4" height="9"/><rect x="3" y="-78" width="4" height="9"/><rect x="-102" y="-66" width="4" height="8"/><rect x="88" y="-52" width="4" height="8"/><rect x="-30" y="-30" width="4" height="8"/><rect x="26" y="-30" width="4" height="8"/></g></g><path d="M101 332Q183 320 253 306Q300 300 347 306Q417 320 499 332Z" fill="#93a299"/><rect y="330" width="600" height="430" fill="url(#gr)"/><path d="M297 330L100 760H500L303 330Z" fill="url(#rd)"/><path d="M297 330L100 760M303 330L500 760" stroke="#d9c7a0" stroke-width="2" opacity=".7" fill="none"/><ellipse cx="279" cy="362" rx="6" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(279 360) scale(0.123)" style="--c:#a8431f" opacity="0.65"/><ellipse cx="324" cy="366" rx="6" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(324 364) scale(0.140)" style="--c:#c77a26" opacity="0.66"/><ellipse cx="273" cy="371" rx="7" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(273 369) scale(0.159)" style="--c:#e2b23c" opacity="0.66"/><ellipse cx="331" cy="377" rx="8" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(331 375) scale(0.182)" style="--c:#c77a26" opacity="0.67"/><ellipse cx="265" cy="383" rx="10" ry="1" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(265 381) scale(0.207)" style="--c:#c77a26" opacity="0.67"/><ellipse cx="340" cy="390" rx="11" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(340 388) scale(0.236)" style="--c:#a8431f" opacity="0.68"/><ellipse cx="254" cy="398" rx="12" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(254 396) scale(0.269)" style="--c:#a8431f" opacity="0.69"/><ellipse cx="353" cy="407" rx="14" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(353 405) scale(0.307)" style="--c:#e2b23c" opacity="0.70"/><ellipse cx="240" cy="418" rx="16" ry="2" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(240 416) scale(0.350)" style="--c:#c77a26" opacity="0.71"/><ellipse cx="368" cy="430" rx="18" ry="3" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(368 428) scale(0.399)" style="--c:#e2b23c" opacity="0.72"/><ellipse cx="222" cy="444" rx="21" ry="3" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(222 442) scale(0.455)" style="--c:#d98f24" opacity="0.74"/><ellipse cx="389" cy="459" rx="24" ry="4" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(389 457) scale(0.519)" style="--c:#d98f24" opacity="0.75"/><ellipse cx="199" cy="477" rx="27" ry="4" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(199 475) scale(0.591)" style="--c:#c77a26" opacity="0.77"/><ellipse cx="416" cy="498" rx="31" ry="5" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(416 496) scale(0.674)" style="--c:#e2b23c" opacity="0.79"/><ellipse cx="168" cy="521" rx="35" ry="5" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(168 519) scale(0.769)" style="--c:#a8431f" opacity="0.82"/><ellipse cx="450" cy="547" rx="40" ry="6" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(450 545) scale(0.876)" style="--c:#7d3b30" opacity="0.85"/><ellipse cx="129" cy="578" rx="46" ry="7" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(129 576) scale(0.999)" style="--c:#e2b23c" opacity="0.88"/><ellipse cx="495" cy="612" rx="52" ry="8" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(495 610) scale(1.139)" style="--c:#c77a26" opacity="0.91"/><ellipse cx="77" cy="651" rx="60" ry="9" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(77 649) scale(1.299)" style="--c:#d98f24" opacity="0.95"/><ellipse cx="554" cy="696" rx="68" ry="10" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(554 694) scale(1.481)" style="--c:#c2522b" opacity="1.00"/><ellipse cx="10" cy="747" rx="78" ry="12" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(10 745) scale(1.689)" style="--c:#a8431f" opacity="1.00"/><ellipse cx="630" cy="805" rx="89" ry="13" fill="#2a2a1a" opacity=".16"/><use href="#tr" transform="translate(630 803) scale(1.925)" style="--c:#8c7f2b" opacity="1.00"/><ellipse cx="249" cy="483" rx="2.7" ry="1.2" fill="#a8431f" opacity=".78" transform="rotate(17 249 483)"/><ellipse cx="191" cy="648" rx="5.6" ry="2.6" fill="#c77a26" opacity=".78" transform="rotate(27 191 648)"/><ellipse cx="274" cy="458" rx="2.2" ry="1.0" fill="#d98f24" opacity=".78" transform="rotate(36 274 458)"/><ellipse cx="329" cy="447" rx="2.0" ry="1.0" fill="#e2b23c" opacity=".78" transform="rotate(-15 329 447)"/><ellipse cx="383" cy="605" rx="4.8" ry="2.2" fill="#7d3b30" opacity=".78" transform="rotate(-30 383 605)"/><ellipse cx="369" cy="585" rx="4.4" ry="2.1" fill="#e2b23c" opacity=".78" transform="rotate(-30 369 585)"/><ellipse cx="430" cy="666" rx="5.9" ry="2.7" fill="#e2b23c" opacity=".78" transform="rotate(-4 430 666)"/><ellipse cx="268" cy="447" rx="2.0" ry="1.0" fill="#c77a26" opacity=".78" transform="rotate(-3 268 447)"/><ellipse cx="204" cy="562" rx="4.0" ry="1.9" fill="#c2522b" opacity=".78" transform="rotate(-13 204 562)"/><ellipse cx="249" cy="505" rx="3.1" ry="1.4" fill="#7d3b30" opacity=".78" transform="rotate(10 249 505)"/><ellipse cx="205" cy="573" rx="4.2" ry="2.0" fill="#8c7f2b" opacity=".78" transform="rotate(3 205 573)"/><ellipse cx="320" cy="466" rx="2.4" ry="1.1" fill="#a8431f" opacity=".78" transform="rotate(-25 320 466)"/><ellipse cx="278" cy="481" rx="2.6" ry="1.2" fill="#a8431f" opacity=".78" transform="rotate(22 278 481)"/><ellipse cx="253" cy="495" rx="2.9" ry="1.3" fill="#d98f24" opacity=".78" transform="rotate(-24 253 495)"/><ellipse cx="343" cy="573" rx="4.2" ry="2.0" fill="#a8431f" opacity=".78" transform="rotate(-13 343 573)"/><ellipse cx="350" cy="438" rx="1.9" ry="0.9" fill="#c2522b" opacity=".78" transform="rotate(-14 350 438)"/><ellipse cx="274" cy="498" rx="2.9" ry="1.4" fill="#d98f24" opacity=".78" transform="rotate(-13 274 498)"/><ellipse cx="202" cy="580" rx="4.4" ry="2.0" fill="#8c7f2b" opacity=".78" transform="rotate(-3 202 580)"/><ellipse cx="261" cy="562" rx="4.0" ry="1.9" fill="#e2b23c" opacity=".78" transform="rotate(-9 261 562)"/><ellipse cx="329" cy="443" rx="2.0" ry="0.9" fill="#a8431f" opacity=".78" transform="rotate(-24 329 443)"/><ellipse cx="471" cy="747" rx="7.3" ry="3.4" fill="#d98f24" opacity=".78" transform="rotate(9 471 747)"/><ellipse cx="260" cy="496" rx="2.9" ry="1.4" fill="#d98f24" opacity=".78" transform="rotate(38 260 496)"/><ellipse cx="264" cy="518" rx="3.3" ry="1.5" fill="#7d3b30" opacity=".78" transform="rotate(30 264 518)"/><ellipse cx="373" cy="501" rx="3.0" ry="1.4" fill="#e2b23c" opacity=".78" transform="rotate(-30 373 501)"/><ellipse cx="257" cy="573" rx="4.2" ry="2.0" fill="#e2b23c" opacity=".78" transform="rotate(-8 257 573)"/><ellipse cx="341" cy="514" rx="3.2" ry="1.5" fill="#c77a26" opacity=".78" transform="rotate(36 341 514)"/><ellipse cx="182" cy="596" rx="4.6" ry="2.2" fill="#c2522b" opacity=".78" transform="rotate(-24 182 596)"/><ellipse cx="258" cy="511" rx="3.2" ry="1.5" fill="#d98f24" opacity=".78" transform="rotate(-38 258 511)"/><ellipse cx="337" cy="460" rx="2.3" ry="1.1" fill="#c2522b" opacity=".78" transform="rotate(-35 337 460)"/><ellipse cx="351" cy="494" rx="2.9" ry="1.3" fill="#d98f24" opacity=".78" transform="rotate(-29 351 494)"/><ellipse cx="403" cy="554" rx="3.9" ry="1.8" fill="#7d3b30" opacity=".78" transform="rotate(26 403 554)"/><ellipse cx="202" cy="626" rx="5.2" ry="2.4" fill="#c2522b" opacity=".78" transform="rotate(20 202 626)"/><ellipse cx="482" cy="731" rx="7.0" ry="3.3" fill="#c2522b" opacity=".78" transform="rotate(36 482 731)"/><ellipse cx="350" cy="643" rx="5.5" ry="2.5" fill="#8c7f2b" opacity=".78" transform="rotate(0 350 643)"/><ellipse cx="275" cy="482" rx="2.6" ry="1.2" fill="#e2b23c" opacity=".78" transform="rotate(7 275 482)"/><ellipse cx="163" cy="675" rx="6.0" ry="2.8" fill="#8c7f2b" opacity=".78" transform="rotate(5 163 675)"/><ellipse cx="358" cy="465" rx="2.4" ry="1.1" fill="#c77a26" opacity=".78" transform="rotate(13 358 465)"/><ellipse cx="127" cy="742" rx="7.2" ry="3.4" fill="#e2b23c" opacity=".78" transform="rotate(-39 127 742)"/><ellipse cx="381" cy="639" rx="5.4" ry="2.5" fill="#c2522b" opacity=".78" transform="rotate(37 381 639)"/><ellipse cx="255" cy="461" rx="2.3" ry="1.1" fill="#8c7f2b" opacity=".78" transform="rotate(13 255 461)"/><ellipse cx="452" cy="672" rx="6.0" ry="2.8" fill="#7d3b30" opacity=".78" transform="rotate(34 452 672)"/><ellipse cx="405" cy="585" rx="4.4" ry="2.1" fill="#c2522b" opacity=".78" transform="rotate(26 405 585)"/><ellipse cx="216" cy="679" rx="6.1" ry="2.8" fill="#c2522b" opacity=".78" transform="rotate(21 216 679)"/><ellipse cx="265" cy="445" rx="2.0" ry="0.9" fill="#e2b23c" opacity=".78" transform="rotate(22 265 445)"/><ellipse cx="251" cy="520" rx="3.3" ry="1.5" fill="#d98f24" opacity=".78" transform="rotate(38 251 520)"/><ellipse cx="233" cy="503" rx="3.0" ry="1.4" fill="#8c7f2b" opacity=".78" transform="rotate(16 233 503)"/></svg>
+  <header>
+    <a class="logo" href="#">Alej</a>
+    <nav aria-label="Hlavné menu"><a href="#pod-zamkom">Pod zámkom</a><a href="#jesen">Jeseň na tanieri</a><a href="#pri-stole">Pri stole</a><a href="#hostia">Hodnotenie</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel" href="tel:+421944581777">+421 944 581 777</a>
+    <a class="btn" href="tel:+421944581777">Zavolať</a>
+  </header>
+  <div class="title"><h1>Alej</h1><p>Reštaurácia · Bojnice · pod zámkom</p></div>
+</div>
+
+<section class="strip" aria-label="Hodnotenia v skratke"><div class="wrap">
+  <div class="sf"><b>4,7<i>★</i></b><span>Google · 1 258 hodnotení</span></div>
+  <div class="sf"><b>4,7<i>★</i></b><span>TripAdvisor · 123 hodnotení · #3 z 26 v Bojniciach</span></div>
+  <div class="sf"><b>96 %</b><span>Facebook odporúča · 207 hodnotení</span></div>
+  <div class="sf"><b>10–22</b><span>Denne podľa portálov · hodiny overiť</span></div>
+</div></section>
+
+<main>
+<section class="stop" id="pod-zamkom"><div class="wrap rail" style="--mbg:var(--bg)">
+  <svg class="mark" viewBox="-15 -15 30 32" aria-hidden="true"><circle class="ring" r="15" cy="1"/><use href="#cr" x="-14" y="-14" width="28" height="30"/></svg>
+  <span class="lbl">Prvé zastavenie · Pod zámkom</span>
+  <h2>Pod Bojnickým zámkom, na pešej zóne</h2>
+  <div class="intro">
+    <div>
+      <blockquote>„Reštaurácia v Bojniciach, priamo na pešej zóne pod Bojnickým zámkom.“</blockquote>
+      <blockquote>„… Poctivá kuchyňa pod taktovkou majiteľa, šéfkuchára.“</blockquote>
+      <p class="src">Ich vlastný text z Facebooku (1. 10. 2026)</p>
+      <div class="cta"><a class="btn" href="tel:+421944581777">Zavolať a rezervovať</a><a class="btn o" href="https://www.google.com/maps/search/Alej+Bojnice+Hurbanovo+n%C3%A1mestie+10+Bojnice" rel="noopener" target="_blank">Navigovať</a></div>
+    </div>
+    <ul class="kf">
+      <li><b>Adresa</b>Hurbanovo námestie 10/17, 972 01 Bojnice</li>
+      <li><b>Terasa</b>Terasa na pešej zóne</li>
+      <li><b>Rezervácia</b>Podľa Gault&amp;Millau odporúčaná — stačí zavolať</li>
+      <li><b>Platba</b>Kartou</li>
+    </ul>
+  </div>
+</div></section>
+
+<svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
+
+<section class="stop autumn" id="jesen"><div class="wrap rail" style="--mbg:var(--plum)">
+  <svg class="mark" viewBox="-15 -15 30 32" aria-hidden="true"><circle class="ring" r="15" cy="1"/><use href="#cr" x="-14" y="-14" width="28" height="30"/></svg>
+  <span class="lbl">Druhé zastavenie · Sezóna</span>
+  <div class="ahead">
+    <h2>Na tanieri teraz: jeseň</h2>
+    <div>
+      <p class="fbq">„Nezaháľame a na tanieri u nás nájdete jeseň aj tento víkend …“</p>
+      <p class="src" style="color:rgba(243,238,230,.66)">Ich príspevok na Facebooku, 1. 10. 2026</p>
+    </div>
+  </div>
+  <div class="menus">
+    <div>
+      <h3>V kuchyni (Gault&amp;Millau)</h3>
+      <ul><li>Bravčové líčka</li><li>Prívarky</li><li>Divina</li><li>Steaky</li></ul>
+      <small>Medzinárodná kuchyňa; podľa Gault&amp;Millau sa menu mení týždenne a varia bez plytvania (zero-waste).</small>
+    </div>
+    <div>
+      <h3>Čo spomínajú hostia (TripAdvisor)</h3>
+      <ul><li>Kačica pre dvoch</li><li>Grilovaný losos</li><li>Steak so zeleninou</li><li>Tagliatelle bolognese</li><li>Kuracie stehno so zeleninou</li><li>Slepačí vývar</li></ul>
+    </div>
+  </div>
+  <p class="anote"><b>Toto nie je aktuálny jedálny lístok.</b> Cenník sme nenašli, preto ceny neuvádzame — aktuálnu ponuku a ceny nájdete na mieste alebo na ich Facebooku.</p>
+</div></section>
+
+<svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
+
+<section class="stop" id="pri-stole"><div class="wrap rail">
+  <svg class="mark" viewBox="-15 -15 30 32" aria-hidden="true"><circle class="ring" r="15" cy="1"/><use href="#cr" x="-14" y="-14" width="28" height="30"/></svg>
+  <span class="lbl">Tretie zastavenie · Pri stole</span>
+  <h2>Terasa, pec na drevo, detské menu</h2>
+  <div class="feat">
+    <div class="ft"><h3>Terasa</h3><p>Terasa alebo záhrada — sedenie vonku na pešej zóne.</p></div>
+    <div class="ft"><h3>Pec na drevo</h3><p>Podľa Gault&amp;Millau varia aj na peci na drevo.</p></div>
+    <div class="ft"><h3>Detské menu</h3><p>A detské stoličky pre najmenších hostí.</p></div>
+    <div class="ft"><h3>Vegetariánske a vegánske</h3><p>Jedlá aj pre tých, ktorí nejedia mäso.</p></div>
+    <div class="ft"><h3>Psy vítané</h3><p>Prijímajú psov; v prevádzke je klimatizácia.</p></div>
+    <div class="ft"><h3>Obed aj večera</h3><p>Steaky, európska a stredoeurópska kuchyňa.</p></div>
+  </div>
+  <p class="src">Podľa Gault&amp;Millau, TripAdvisor a ich Facebook stránky (30. 9. – 1. 10. 2026).</p>
+</div></section>
+
+<svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
+
+<section class="stop" id="hostia"><div class="wrap rail">
+  <svg class="mark" viewBox="-15 -15 30 32" aria-hidden="true"><circle class="ring" r="15" cy="1"/><use href="#cr" x="-14" y="-14" width="28" height="30"/></svg>
+  <span class="lbl">Štvrté zastavenie · Hostia</span>
+  <h2>Spokojní hostia pod zámkom</h2>
+  <div class="big">
+    <div class="bg3"><b>4,7<i>★</i></b><span><strong>Google</strong> · 1 258 hodnotení</span></div>
+    <div class="bg3"><b>4,7<i>★</i></b><span><strong>TripAdvisor</strong> · 123 hodnotení, #3 z 26 v Bojniciach</span></div>
+    <div class="bg3"><b>96 %</b><span><strong>Facebook</strong> · odporúča, 207 hodnotení</span></div>
+  </div>
+</div></section>
+
+<svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
+
+<section class="stop" id="kontakt"><div class="wrap rail">
+  <svg class="mark" viewBox="-15 -15 30 32" aria-hidden="true"><circle class="ring" r="15" cy="1"/><use href="#cr" x="-14" y="-14" width="28" height="30"/></svg>
+  <span class="lbl">Cieľ · Hodiny a adresa</span>
+  <h2>Hurbanovo námestie 10/17</h2>
+  <div class="cols">
+    <div>
+      <div class="hours"><div class="r"><span>Pondelok–nedeľa</span><b class="num">10:00–22:00</b></div></div>
+      <p class="warn"><b>Hodiny — overiť.</b> menucka.sk, TripAdvisor aj Google uvádzajú denne 10:00–22:00, Gault&amp;Millau uvádza iný rozsah. Pred návštevou radšej zavolajte.</p>
+    </div>
+    <div>
+      <dl>
+        <div><dt>Adresa</dt><dd>Hurbanovo námestie 10/17<br>972 01 Bojnice</dd></div>
+        <div><dt>Telefón</dt><dd><a class="u" href="tel:+421944581777">+421 944 581 777</a></dd></div>
+        <div><dt>E-mail</dt><dd><a class="u" href="mailto:restauraciaalej@gmail.com">restauraciaalej@gmail.com</a></dd></div>
+        <div><dt>Online</dt><dd><a class="u" href="https://www.facebook.com/people/Alej-Bojnice/100039887444909/" rel="noopener" target="_blank">Facebook · 6,8K sledovateľov</a><br><a class="u" href="https://www.instagram.com/alej_bojnice/" rel="noopener" target="_blank">Instagram @alej_bojnice</a></dd></div>
+      </dl>
+      <div class="cta"><a class="btn" href="tel:+421944581777">Zavolať</a><a class="btn o" href="https://www.google.com/maps/search/Alej+Bojnice+Hurbanovo+n%C3%A1mestie+10+Bojnice" rel="noopener" target="_blank">Navigovať</a></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Neoficiálny návrh webu · webdavid.sk · 2026</span>
+  <span>Podklady: ich Facebook, menucka.sk, TripAdvisor, Gault&amp;Millau, Google (30. 9. – 1. 10. 2026)</span>
+</div></footer>
+
+<nav class="bar" aria-label="Rýchle akcie">
+  <a class="a" href="tel:+421944581777">Zavolať</a>
+  <a class="b" href="https://www.google.com/maps/search/Alej+Bojnice+Hurbanovo+n%C3%A1mestie+10+Bojnice" rel="noopener" target="_blank">Navigovať</a>
+</nav>
+</html>
