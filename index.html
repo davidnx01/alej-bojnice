@@ -81,11 +81,21 @@ blockquote+blockquote{margin-top:18px;color:var(--rust)}
 .autumn h2{color:#fff;max-width:14ch}
 .fbq{font:italic 500 clamp(24px,2.6vw,32px)/1.25 var(--head);max-width:36ch;color:#f3eee6;margin-top:26px;padding-left:20px;border-left:2px solid var(--gold)}
 .ahead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px clamp(28px,6vw,90px);align-items:end}
-.menus{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(28px,6vw,90px);margin-top:52px}
-.menus h3{font:700 12px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding-bottom:14px;border-bottom:1px solid rgba(243,238,230,.4)}
-.menus ul{list-style:none;padding:0}
-.menus li{font:500 clamp(25px,2.4vw,32px)/1.2 var(--head);padding:14px 0 13px;border-bottom:1px solid rgba(243,238,230,.16)}
-.menus small{display:block;font:400 13px/1.5 var(--body);color:rgba(243,238,230,.66);margin-top:12px}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,32px);margin-top:48px}
+.dishes figure{margin:0}
+.dishes img,.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px;transition:transform .5s}
+.fwrap{overflow:hidden;border-radius:2px}
+.fwrap:hover img{transform:scale(1.045)}
+figcaption{font-size:14.5px;line-height:1.45;margin-top:10px;color:rgba(243,238,230,.82)}
+.mn{margin-top:56px;padding-top:30px;border-top:1px solid rgba(243,238,230,.4)}
+.mn>h3{font:500 clamp(30px,3.4vw,44px)/1.1 var(--head);color:#fff}
+.mn>h3 small{display:block;font:700 12px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(28px,6vw,90px);margin-top:10px}
+.mgrid h4{font:700 12px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:26px 0 4px}
+.mgrid ul{list-style:none;padding:0}
+.mgrid li{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:11px 0 10px;border-bottom:1px solid rgba(243,238,230,.16);font:500 clamp(20px,1.9vw,24px)/1.22 var(--head)}
+.mgrid li .pr{font:700 15.5px/1 var(--body);font-variant-numeric:tabular-nums lining-nums;color:var(--gold);white-space:nowrap}
+.mgrid li small{display:block;font:400 13px/1.4 var(--body);color:rgba(243,238,230,.62)}
 .anote{margin-top:36px;padding:16px 20px;border:1px solid rgba(226,178,60,.55);font-size:15.5px;max-width:78ch;color:#f3eee6}
 .anote b{color:var(--gold)}
 
@@ -96,6 +106,10 @@ blockquote+blockquote{margin-top:18px;color:var(--rust)}
 .ft h3{font:600 28px/1.1 var(--head)}
 .ft p{font-size:15px;line-height:1.55;color:var(--mute);margin-top:6px}
 
+.gal{display:grid;grid-template-columns:1fr 1.7fr 1fr;gap:clamp(12px,2vw,24px);margin-top:48px;align-items:start}
+.gal figure{margin:0}
+.gal img{aspect-ratio:auto;height:clamp(260px,30vw,400px)}
+.gal figcaption,.stop:not(.autumn) figcaption{color:var(--mute)}
 /* hostia */
 .big{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px}
 .bg3{padding:8px 26px 8px 0}
@@ -117,7 +131,8 @@ dt{font:700 12px/1.9 var(--body);letter-spacing:.14em;text-transform:uppercase;c
 dd{font-size:17px;overflow-wrap:anywhere}
 dd a{font-weight:700}
 footer{background:var(--plum);color:rgba(243,238,230,.84);padding:30px 0 34px;font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-between}
+footer .fl{display:flex;align-items:center;gap:14px}footer .fl img{border-radius:50%;background:#fff}
+footer .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px;justify-content:space-between}
 .bar{display:none}
 
 @media (max-width:1020px){nav{display:none}.feat{grid-template-columns:1fr 1fr}.ft:not(:nth-child(3n+1)){padding-left:0;border-left:0}.ft:nth-child(2n){padding-left:24px;border-left:1px solid var(--line)}.ft:nth-child(2n+1){padding-left:0;border-left:0}
@@ -131,8 +146,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
   .rail{padding-top:60px;padding-bottom:60px;padding-left:calc(var(--gut) + 42px)}
   .mark{top:56px;width:26px;height:28px;left:calc(var(--gut) + 2px)}
   .rail::before{left:calc(var(--gut) + 15px)}
-  .intro,.ahead,.menus,.cols{grid-template-columns:1fr}
-  .menus{margin-top:34px;gap:34px}
+  .intro,.ahead,.cols{grid-template-columns:1fr}
+  .dishes{grid-template-columns:1fr;margin-top:34px}
+  .mgrid{grid-template-columns:1fr}
+  .mn{margin-top:40px}
+  .gal{grid-template-columns:1fr 1fr}.gal figure:nth-child(2){grid-column:1/3;order:-1}.gal img{height:220px}.gal figure:nth-child(2) img{height:170px}
   .feat{grid-template-columns:1fr}.ft{padding-left:0!important;border-left:0!important}
   .big{grid-template-columns:1fr;gap:24px}.bg3+.bg3{padding-left:0;border-left:0;border-top:1px dotted var(--rail);padding-top:22px}
   .bg3 b{font-size:64px}
@@ -209,18 +227,41 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
       <p class="src" style="color:rgba(243,238,230,.66)">Ich príspevok na Facebooku, 1. 10. 2026</p>
     </div>
   </div>
-  <div class="menus">
-    <div>
-      <h3>V kuchyni (Gault&amp;Millau)</h3>
-      <ul><li>Bravčové líčka</li><li>Prívarky</li><li>Divina</li><li>Steaky</li></ul>
-      <small>Medzinárodná kuchyňa; podľa Gault&amp;Millau sa menu mení týždenne a varia bez plytvania (zero-waste).</small>
-    </div>
-    <div>
-      <h3>Čo spomínajú hostia (TripAdvisor)</h3>
-      <ul><li>Kačica pre dvoch</li><li>Grilovaný losos</li><li>Steak so zeleninou</li><li>Tagliatelle bolognese</li><li>Kuracie stehno so zeleninou</li><li>Slepačí vývar</li></ul>
+  <div class="dishes">
+    <figure><div class="fwrap"><img src="assets/alej-kacacie-prsia.webp" width="760" height="760" loading="lazy" alt="Kačacie prsia s tekvicovým pyré, slivkami a tekvicovými semienkami na bielom tanieri, pohľad zhora"></div><figcaption>Kačacie prsia s tekvicovým pyré</figcaption></figure>
+    <figure><div class="fwrap"><img src="assets/alej-cestoviny-jesen.webp" width="760" height="760" loading="lazy" alt="Cestoviny s mäsovou omáčkou a nakladanou červenou cibuľou na bielom tanieri, v pozadí jesenná dekorácia s muchotrávkami a tekvičkami"></div><figcaption>Cestoviny s mäsom a nakladanou cibuľou</figcaption></figure>
+    <figure><div class="fwrap"><img src="assets/alej-hovadzie-knedla.webp" width="760" height="760" loading="lazy" alt="Plátky hovädzieho mäsa v oranžovej omáčke s knedľou, šľahačkou a brusnicami, pohľad zhora"></div><figcaption>Hovädzie s omáčkou a knedľou</figcaption></figure>
+  </div>
+  <div class="mn">
+    <h3><small>Menu z ich Facebooku · platí 1.–4. 10. 2026</small>Čo varia tento týždeň</h3>
+    <div class="mgrid">
+      <div>
+        <h4>Polievka</h4>
+        <ul><li><span>Kulajda s vajcom <small>0,22 l</small></span><span class="pr">5,20 €</span></li><li><span>Hydinový vývar <small>0,22 l</small></span><span class="pr">4,90 €</span></li></ul>
+        <h4>Predjedlo</h4>
+        <ul><li><span>Tatarák z hovädzej sviečkovice, kapari, majonéza, domáce hrianky</span><span class="pr">16,90 €</span></li><li><span>Domáca paštéta, náš chlebík</span><span class="pr">9,90 €</span></li><li><span>Pikantná mäsová zmes, domáce hrianky</span><span class="pr">10,90 €</span></li></ul>
+        <h4>Dezert</h4>
+        <ul><li><span>Domáce minišišky s džemom a karamelom</span><span class="pr">6,90 €</span></li><li><span>Gaštanové tiramisu</span><span class="pr">5,50 €</span></li></ul>
+        <h4>Prílohy</h4>
+        <ul><li><span>Opekané zemiaky / ryža</span><span class="pr">3,95 €</span></li><li><span>Grilovaná zelenina</span><span class="pr">4,95 €</span></li><li><span>Silná mäsová šťava / podľa ponuky</span><span class="pr">3,95 €</span></li><li><span>Krajec chleba</span><span class="pr">0,70 €</span></li></ul>
+      </div>
+      <div>
+        <h4>Hlavné jedlo</h4>
+        <ul>
+          <li><span>Jelení chrbát v makovej kruste, šípková omáčka, pečená polenta</span><span class="pr">22,90 €</span></li>
+          <li><span>Bravčová panenka, pfeffer omáčka s brandy, domáce hranolky</span><span class="pr">16,90 €</span></li>
+          <li><span>Pečené kuracie stehno, krémové tekvicové rizoto</span><span class="pr">15,90 €</span></li>
+          <li><span>Kačacie prsia, tekvicové pyré, pfeffer omáčka s brandy, hruška</span><span class="pr">16,90 €</span></li>
+          <li><span>Krémové tekvicové rizoto s cottage cheese a tekvicovými jadierkami</span><span class="pr">13,90 €</span></li>
+          <li><span>Cézar šalát s kuracím mäsom, slaninkou a krutónom, parmezán</span><span class="pr">15,90 €</span></li>
+          <li><span>Rib-eye steak <small>300 g</small></span><span class="pr">34,90 €</span></li>
+          <li><span>Steak z hovädzej sviečkovice <small>200 g</small></span><span class="pr">29,90 €</span></li>
+          <li><span>Pečená pražma, chimichurri salsa <small>každých 10 g navyše 0,30 €</small></span><span class="pr">18,90 €</span></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <p class="anote"><b>Toto nie je aktuálny jedálny lístok.</b> Cenník sme nenašli, preto ceny neuvádzame — aktuálnu ponuku a ceny nájdete na mieste alebo na ich Facebooku.</p>
+  <p class="anote"><b>Ceny sú z ich menu na Facebooku (1.–4. 10. 2026), nie rozvozové.</b> Menu sa mení — podľa Gault&amp;Millau týždenne. Gramáže a alergény sú v pôvodnom menu; aktuálnu ponuku vždy potvrdíte na mieste. Fotky jedál sú z ich Facebooku a nemusia byť z tohto týždňa.</p>
 </div></section>
 
 <svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
@@ -238,6 +279,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
     <div class="ft"><h3>Obed aj večera</h3><p>Steaky, európska a stredoeurópska kuchyňa.</p></div>
   </div>
   <p class="src">Podľa Gault&amp;Millau, TripAdvisor a ich Facebook stránky (30. 9. – 1. 10. 2026).</p>
+  <div class="gal">
+    <figure><div class="fwrap"><img src="assets/alej-kuracie-rizoto.webp" width="600" height="800" loading="lazy" alt="Pečené kuracie stehno na krémovom rizote s paradajkami a cuketou na zelenom tanieri"></div><figcaption>Kuracie stehno na rizote so zeleninou</figcaption></figure>
+    <figure><div class="fwrap"><img src="assets/alej-interier.webp" width="1400" height="568" loading="lazy" alt="Pohľad do interiéru reštaurácie cez sklenené poháre: drevené stoly, police s rastlinami a veľké hodiny"></div><figcaption>Pohľad do interiéru</figcaption></figure>
+    <figure><div class="fwrap"><img src="assets/alej-dusene-maso.webp" width="600" height="800" loading="lazy" alt="Pečené mäso na kosti so zemiakovou kašou, červenou cibuľou a petržlenovou vňaťou na tanieri"></div><figcaption>Pečené mäso na kosti so zemiakovou kašou</figcaption></figure>
+  </div>
 </div></section>
 
 <svg class="row" aria-hidden="true"><rect width="100%" height="30"/></svg>
@@ -278,8 +324,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-betw
 </main>
 
 <footer><div class="wrap">
-  <span>Neoficiálny návrh webu · webdavid.sk · 2026</span>
-  <span>Podklady: ich Facebook, menucka.sk, TripAdvisor, Gault&amp;Millau, Google (30. 9. – 1. 10. 2026)</span>
+  <span class="fl"><img src="assets/alej-logo.webp" width="44" height="44" loading="lazy" alt="Logo reštaurácie Alej">Neoficiálny návrh webu · webdavid.sk · 2026</span>
+  <span>Podklady a fotky: ich Facebook, menucka.sk, TripAdvisor, Gault&amp;Millau, Google (30. 9. – 1. 10. 2026)</span>
 </div></footer>
 
 <nav class="bar" aria-label="Rýchle akcie">
